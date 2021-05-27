@@ -1,4 +1,4 @@
-package com.dagmawi.hw2;
+package com.dagmawi.hw_3;
 
 import org.junit.Test;
 

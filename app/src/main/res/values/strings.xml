@@ -1,29 +1,18 @@
 <resources>
-    <string name="app_name">Pbrunos</string>
-    <string name="edit_message">Enter a Message</string>
-    <string name="button_send">Send</string>
-    <string name="dagmawi">Dagmawi</string>
-    <string name="by">By...</string>
-    <string name="funfact">FunFact:</string>
-    <string name="dagmawi_demissie">Dagmawi Demissie</string>
-    <string name="i_have_a_polit_s_license_but_have_not_flown_in_a_while_so_i_have_not_kept_it_current_i_hope_to_get_current_and_fly_someday_soon_i_look_forward_to_flying_my_daughter_to_orcas_island_for_a_burger">I have a polit\'s license but have not flown in a while, so I have not kept it current. I hope to get current and fly someday soon. I look forward to flying my daughter to Orcas Island for a burger.</string>
-    <string name="custom_toast">Custom Toast</string>
-    <string name="alert_toast">Alert Toast</string>
-    <string name="top_toast">Top Toast</string>
-    <string name="bottom_toast">Bottom Toast</string>
-    <string name="title_activity_movies">MoviesActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="title_activity_movie_details">MovieDetailsActivity</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
+    <string name="app_name">"Dagmawi's App"</string>
+    <string name="home_screen">Home</string>
+    <string name="movie_list_name">Movies</string>
+    <string name="movie_list_details_name">Movie Details</string>
+    <string name="name">Name</string>
+    <string name="enter_name">Enter name</string>
+    <string name="movies">Movies</string>
+    <string name="send">Send</string>
+    <string name="games">Games</string>
+    <string name="characters">Characters</string>
+    <string name="downloads">Downloads</string>
+    <string name="send_confirmation">Name sent!</string>
+    <string name="toast_one">"'Toons!"</string>
+    <string name="toast_two">Games!</string>
+    <string name="toast_three">Characters!</string>
+    <string name="toast_four">Downloads!</string>
 </resources>
