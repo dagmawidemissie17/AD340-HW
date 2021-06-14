@@ -1,10 +1,5 @@
 package com.dagmawi.hw_3;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,11 +8,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.squareup.picasso.Picasso;
 
 public class Movies extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "com.dagmawi.hw_3.MESSAGE";
+    public static final String EXTRA_MESSAGE = "com.natesoft.nateapp.MESSAGE";
 
     String[][] movies = {
             {"Night of the Comet", "1984", "Thom Eberhardt", "https://cdn.collider.com/wp-content/uploads/2016/10/night-of-comet.jpg", "What would kids in the 1980s do if the apocalypse blew through the world without them noticing? Hang out at the mall, but of course. That’s the set-up for this very funny, quite dated horror-comedy, which begins when a quartet of adolescents lock themselves inside a projection booth at the mall’s multiplex. This somehow allows them to live through an extinction level event of some sort, which has also left roaming bands of murderous mutants. Catherine Mary Stewart of the equally inexplicable Weekend at Bernie’s leads the film, but it’s a movie of mood more than substance ultimately. Does the wealth-fueled naiveté of the average white teenager survive in a vacuum? Does it go away when they are being hunted for sustenance? It’s an interesting to watch on these terms and when the zombies show up, director Thom Eberhardt adds menace and a tight feel for suspense to the action sequences. And if we’re being honest, it belongs on this list for its soundtrack alone. The rest of this is just whip cream and cherries. – Chris Cabin"},
@@ -50,7 +50,7 @@ public class Movies extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.movieRecycler);
         RecyclerView.LayoutManager recyclerViewLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(recyclerViewLayoutManager);
-        RecyclerView.Adapter recyclerViewAdapter = new CustomAdapter();
+        RecyclerView.Adapter recyclerViewAdapter = new MovieAdapter();
         recyclerView.setAdapter(recyclerViewAdapter);
     }
 
@@ -62,7 +62,7 @@ public class Movies extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+    public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             public TextView title;
@@ -71,19 +71,19 @@ public class Movies extends AppCompatActivity {
 
             public ViewHolder(View itemView) {
                 super(itemView);
-                title = itemView.findViewById(R.id.title);
-                year = itemView.findViewById(R.id.year);
-                image = itemView.findViewById(R.id.image);
+                title = itemView.findViewById(R.id.movTitle);
+                year = itemView.findViewById(R.id.movYear);
+                image = itemView.findViewById(R.id.movImage);
                 itemView.setOnClickListener(v -> {
-                    int pos = getAdapterPosition();
-                    showMovie(pos);
+                    int index = getAdapterPosition();
+                    showMovie(index);
                 });
             }
         }
 
         @NonNull
         @Override
-        public CustomAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+        public MovieAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
             View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.movie_entry, viewGroup,false);
             return new ViewHolder(view);
         }
@@ -102,3 +102,4 @@ public class Movies extends AppCompatActivity {
     }
 
 }
+

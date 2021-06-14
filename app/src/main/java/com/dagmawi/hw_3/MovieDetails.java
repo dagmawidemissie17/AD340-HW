@@ -1,10 +1,10 @@
 package com.dagmawi.hw_3;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.squareup.picasso.Picasso;
 
@@ -16,13 +16,13 @@ public class MovieDetails extends AppCompatActivity {
         setContentView(R.layout.activity_movie_details);
 
         Bundle bundle = this.getIntent().getExtras();
-        String[] movieDetails = bundle != null ? bundle.getStringArray("com.dagmawi.hw_3.MESSAGE") : null;
+        String[] movieDetails = bundle != null ? bundle.getStringArray("com.natesoft.nateapp.MESSAGE") : null;
 
-        ImageView image = this.findViewById(R.id.image);
-        TextView title = this.findViewById(R.id.title);
-        TextView director = this.findViewById(R.id.director);
-        TextView year = this.findViewById(R.id.year);
-        TextView description = this.findViewById(R.id.description);
+        ImageView image = this.findViewById(R.id.movImageLarge);
+        TextView title = this.findViewById(R.id.movTitle);
+        TextView director = this.findViewById(R.id.movDirector);
+        TextView year = this.findViewById(R.id.movYear);
+        TextView description = this.findViewById(R.id.movDescription);
 
         if (movieDetails != null) {
             title.setText(movieDetails[0]);
